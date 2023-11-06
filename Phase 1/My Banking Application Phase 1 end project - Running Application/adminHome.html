@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Online Banking Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <h1 align="center">Welcome to Admin Home Page<span class="text-primary">.</span></h1>
+      <div class="container">
+        <div class="row align-items-center">
+            
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#customer-section" class="nav-link">Customer Details</a></li>
+                <li><a href="#loan-section" class="nav-link">Loan Section</a></li>
+                <li><a href="#search-section" class="nav-link">Search</a></li>
+                <li><a href="#view-transaction" class="nav-link">View Transaction</a></li>
+                <li><a href="#change-password-section" class="nav-link">Change Password</a></li>
+                <li><a href="index.html" class="nav-link">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+
+  
+     
+    <div class="site-blocks-cover overlay" 
+    style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+
+    </div>  
+
+    <section class="site-section" id="customer-section">
+      <div class="site-section cta-big-image" >
+        <div class="container" >
+          
+          <div class="row mb-5 justify-content-center">
+            
+              <div class="col-md-8 text-center">
+                <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Customer Details</h2>
+              </div>
+  
+          </div>
+  
+          <div class="row" >
+  
+            <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+                
+               
+              <table class="table table-striped">
+                  <tr>
+                    <th>CustomerId</th>
+                    <th>Customer Name</th>
+                    <th>Gender</th>
+                    <th>PhNumber</th>
+                    <th>Address</th>
+                    <th>AccoutNumber</th>
+                    <th>Balance Amount</th>
+                  </tr>
+                  <tr>
+                    <td>112233</td>
+                    <td>Raj</td>
+                    <td>Male</td>
+                    <td>9900123456</td>
+                    <td>Nandini Layout</td>
+                    <td>325678</td>
+                    <td>5300</td>
+                  </tr>
+                  <tr>
+                    <td>112234</td>
+                    <td>Ajay</td>
+                    <td>Male</td>
+                    <td>9900123465</td>
+                    <td>RT Layout</td>
+                    <td>325679</td>
+                    <td>4800</td>
+                  </tr>
+                  <tr>
+                    <td>112235</td>
+                    <td>Reeta</td>
+                    <td>Female</td>
+                    <td>9900123434</td>
+                    <td>Electronic City</td>
+                    <td>325680</td>
+                    <td>5900</td>
+                  </tr>
+                  <tr>
+                    <td>112236</td>
+                    <td>Meeta</td>
+                    <td>Female</td>
+                    <td>99001236543</td>
+                    <td>Mahalaximi Layout</td>
+                    <td>325681</td>
+                    <td>6200</td>
+                  </tr>
+              </table>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="loan-section">
+
+      <div class="site-section cta-big-image" id="loan-section">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-8 text-center">
+              <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="10">Loan Details</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 mb-5" data-aos="fade-up" data-aos-delay="">
+              <figure class="circle-bg">
+                <img src="./images/loan.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+              </figure>
+            </div>
+            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                A Loan Estimate tells you important details about a mortgage loan you have requested. Use this tool to review your Loan Estimate to make sure it reflects what you discussed with the lender. If something looks different from what you expected, ask why. Request multiple Loan Estimates from different lenders so you can compare and choose the loan that's right for you
+              </div>
+            </div>
+  
+            </div>
+            
+          </div>    
+          </div>
+        </div>
+
+    </section>
+
+
+    
+    <section class="site-section" id="search-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Search Section</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="h-entry">
+              <a href="single.html">
+                <img src="images/search.jpg" alt="Image" class="img-fluid">
+              </a>
+            </div> 
+          </div>
+          <div class="col-md-4 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <form style="margin-top: 0px;">
+              <div class="form-floating mb-3">
+                <input type="search" class="form-control" id="customerid" placeholder="Search by Customer Id">
+                <label for="floatingInput">Customer Id</label>
+              </div>
+              <span>OR</span>
+              <div class="form-floating mb-3">
+                <input type="search" class="form-control" id="accountnumber" placeholder="Search by Account Number">
+                <label for="floatingInput">Account Number</label>
+              </div>
+              <span>OR</span>
+              <div class="form-floating mb-3">
+                <input type="search" class="form-control" id="phonenumber" placeholder="Search by Phone Number">
+                <label for="floatingInput">Phone Number</label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button" 
+                >Search</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+
+
+    <section class="site-section bg-light" id="change-password-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Password Change</h2>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+              <img src="./images/login.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+        </div>
+
+          <div class="col-lg-6 mb-5">
+
+            
+
+            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+              <form style="margin-top: 0px;">
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="oldpassword" placeholder="Old Password">
+                  <label for="floatingInput">Old Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="newpassword" placeholder="New Password">
+                  <label for="floatingPassword">New Passowrd</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="renewpassword" placeholder="Rewrite New Password">
+                  <label for="floatingPassword">Rewrite New Passowrd</label>
+                </div>
+                  <div class="d-grid">
+                  <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button" 
+                  >Change Password</button>
+                  </div>
+              </form>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="site-section border-bottom">
+      <div class="site-section cta-big-image" id="view-transaction">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-8 text-center">
+              <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">View Transaction Details</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+              <figure class="circle-bg">
+              <img src="images/transactiondetails.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+              </figure>
+            </div>
+            <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              
+              <table class="table table-striped">
+                <tr>
+                  <th>SrNo</th>
+                  <th>Account Number</th>
+                  <th>Type of transaction</th>
+                  <th>Date and Time</th>
+                  <th>Amount</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>325678</td>
+                  <td>Withdraw</td>
+                  <td>25-12-2022 23:12</td>
+                  <td>5000</td>
+                 </tr>
+                <tr>
+                  <td>2</td>
+                  <td>325678</td>
+                  <td>Withdraw</td>
+                  <td>25-12-2022 2:17</td>
+                  <td>2800</td>
+                 </tr>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>325680</td>
+                  <td>Deposit</td>
+                  <td>14-12-2022 4:12</td>
+                  <td>12000</td>
+                 </tr>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>325680</td>
+                  <td>Withdraw</td>
+                  <td>23-12-2022 2:18</td>
+                  <td>8800</td>
+                 </tr>
+                </tr>
+            </table>   
+            </div>
+          </div>        
+        </div>  
+      </div>
+    </section>
+  
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  
+  <script src="js/main.js"></script>
+
+  
+  </body>
+</html>

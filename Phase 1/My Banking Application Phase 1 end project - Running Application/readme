@@ -1,0 +1,7 @@
+index.html is first page of this application. 
+this page connect to home.html page 
+from home page you can login as admin or customer 
+admin login --> emailid : admin@gmail.com and password : admin@123 
+customer login --> emailid : raj@gmail.com and password : abc@123 
+styling for this application use css, css3 and bootstrap 
+open source library use for dynamic effect ie jquery. 

@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Banker &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" >
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <h1 align="center">Welcome user <span class="text-primary" id="user"></span> to Home Page</h1>
+      <div class="container">
+        <div class="row align-items-center">
+            
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#view-account-details" class="nav-link">View Account</a></li>
+                <li><a href="#transfer-amount" class="nav-link">Transfer Amount</a></li>
+                <li><a href="#withdraw-amount" class="nav-link">Withdraw</a></li>
+                <li><a href="#deposit-amount" class="nav-link">Deposit</a></li>
+                <li><a href="#view-transaction" class="nav-link">View Transaction</a></li>
+                <li><a href="#change-password-section" class="nav-link">Change Password</a></li>
+                <li><a href="#contact-section" class="nav-link">Request</a></li>
+                <li><a href="index.html" class="nav-link">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+
+  
+     
+    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+    
+    </div>
+
+    <section class="site-section border-bottom">
+    <div class="site-section cta-big-image" id="view-account-details">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">View Account Details</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="images/accountdetails.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            <h3 class="text-black mb-4">Your Account Details is </h3>
+            <p>Customer Id is    : 112233</p>
+            <p>Customer Name     : Raj Kumar </p>
+            <p>Account Number is : 325678 </p>
+            <p>Balance amount is : 5300</p>           
+          </div>
+        </div>        
+      </div>  
+    </div>
+  </section>
+
+
+  <section class="site-section border-bottom">
+    <div class="site-section cta-big-image" id="transfer-amount">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Trasfer amount</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="images/transferamount.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            <form style="margin-top: 0px;">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="fromaccount" placeholder="From account number">
+                <label for="floatingInput">From Account Number</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="toaccount" placeholder="To account number">
+                <label for="floatingPassword">To Account Number</label>
+              </div>
+
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="amount" placeholder="Send amount">
+                <label for="floatingPassword">Amount</label>
+              </div>
+
+
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button">Transfer</button>   
+              </div>
+            </form>         
+          </div>
+        </div>        
+      </div>  
+    </div>
+  </section>
+
+
+  
+  <section class="site-section border-bottom">
+    <div class="site-section cta-big-image" id="withdraw-amount">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Withdraw Amount</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="images/withdraw.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            <form style="margin-top: 0px;">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="fromaccount" placeholder="From account number">
+                <label for="floatingInput">From Account Number</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="amount" placeholder="Amount to withdraw">
+                <label for="floatingPassword">Amount</label>
+              </div>
+
+
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button">Withdraw</button>   
+              </div>
+            </form>         
+          </div>
+        </div>        
+      </div>  
+    </div>
+  </section>
+
+
+  
+  <section class="site-section border-bottom">
+    <div class="site-section cta-big-image" id="deposit-amount">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Deposit Amount</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="images/deposit.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            <form style="margin-top: 0px;">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="fromaccount" placeholder="From account number">
+                <label for="floatingInput">From Account Number</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="amount" placeholder="Amount to Deposit">
+                <label for="floatingPassword">Amount</label>
+              </div>
+
+
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button">Deposit Amount</button>   
+              </div>
+            </form>         
+          </div>
+        </div>        
+      </div>  
+    </div>
+  </section>
+
+  <section class="site-section border-bottom">
+    <div class="site-section cta-big-image" id="view-transaction">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">View Transaction Details</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="images/transactiondetails.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            <table class="table table-striped">
+              <tr>
+                <th>SrNo</th>
+                <th>Type of transaction</th>
+                <th>Date and Time</th>
+                <th>Amount</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Withdraw</td>
+                <td>25-12-2022 23:12</td>
+                <td>5000</td>
+               </tr>
+              <tr>
+                <td>2</td>
+                <td>Withdraw</td>
+                <td>25-12-2022 2:17</td>
+                <td>2800</td>
+               </tr>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Deposit</td>
+                <td>14-12-2022 4:12</td>
+                <td>12000</td>
+               </tr>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Withdraw</td>
+                <td>23-12-2022 2:18</td>
+                <td>8800</td>
+               </tr>
+              </tr>
+          </table>   
+          </div>
+        </div>        
+      </div>  
+    </div>
+  </section>
+
+  <section class="site-section bg-light" id="change-password-section" data-aos="fade">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">Password Change</h2>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          <figure class="circle-bg">
+            <img src="./images/login.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+          </figure>
+      </div>
+
+        <div class="col-lg-6 mb-5">
+
+          
+
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <form style="margin-top: 0px;">
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="oldpassword" placeholder="Old Password">
+                <label for="floatingInput">Old Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="newpassword" placeholder="New Password">
+                <label for="floatingPassword">New Passowrd</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="renewpassword" placeholder="Rewrite New Password">
+                <label for="floatingPassword">Rewrite New Passowrd</label>
+              </div>
+                <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button" 
+                >Change Password</button>
+                </div>
+            </form>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="site-section bg-light" id="contact-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-room d-block h2 text-primary"></span>
+              <span>Address: NALANDA 53/1 C, Manoj Arcade, 24th Main Rd, Sector 2, HSR Layout, Bengaluru - 560102, Karnataka, India</span>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-phone d-block h2 text-primary"></span>
+              <a href="#">+1 232 3235 324</a>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-0">
+              <span class="icon-mail_outline d-block h2 text-primary"></span>
+              <a href="#">youremail@domain.com</a>
+            </p>
+          </div>
+        
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <form action="#" class="p-5 bg-white">              
+              <p class="h4 text-black mb-5">Contact Form</p> 
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label> 
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label> 
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                </div>
+              </div>
+
+  
+            </form>
+          </div>
+        </div>  
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">About Us...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#about-section" class="smoothscroll">Terms</a></li>
+                  <li><a href="#about-section" class="smoothscroll">Policy</a></li>
+                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="#services-section" class="smoothscroll">Services</a></li>
+                  <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 footer-social">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p class="copyright"><small>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+        
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  
+  <script src="js/main.js"></script>
+  <script src="userName.js"></script>
+  
+  </body>
+</html>
