@@ -1,0 +1,253 @@
+{
+  "login": {
+    "id": 1,
+    "emailid": "admin@gmail.com",
+    "password": "admin@123",
+    "typeofuser": "admin"
+  },
+  "customers": [
+    {
+      "accno": 10010,
+      "amount": 2320,
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "password": "raj@123",
+      "typeofuser": "customer",
+      "gender": "male",
+      "phonenumber": "9912312123",
+      "address": "Nandini Layout",
+      "id": 1
+    },
+    {
+      "accno": 10011,
+      "amount": 2830,
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "password": "seeta@123",
+      "typeofuser": "customer",
+      "gender": "female",
+      "phonenumber": "9987612341",
+      "address": "HSR Laylut",
+      "id": 2
+    },
+    {
+      "cname": "Akash",
+      "emailid": "akash@gmail.com",
+      "gender": "male",
+      "phonenumber": "9900103077",
+      "address": "Alur BDA",
+      "password": "akash@1234",
+      "accno": 10012,
+      "amount": 1100,
+      "typeofuser": "customer",
+      "cid": 112235,
+      "id": 3
+    },
+    {
+      "cname": "shilpa",
+      "emailid": "shilpa@gmail.com",
+      "gender": "female",
+      "phonenumber": "8095685758",
+      "address": "Nan",
+      "password": "shilpa@123",
+      "accno": 10013,
+      "amount": 1000,
+      "typeofuser": "customer",
+      "cid": 112236,
+      "id": 4
+    },
+    {
+      "cname": "steven",
+      "emailid": "steven@gmail.com",
+      "gender": "male",
+      "phonenumber": "8756387689",
+      "address": "HSR Layout",
+      "password": "steven@1234",
+      "accno": 10014,
+      "amount": 960,
+      "typeofuser": "customer",
+      "cid": 112237,
+      "id": 5
+    }
+  ],
+  "transaction": [
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 300,
+      "typeoftransaction": "Withdraw",
+      "dot": "2023-01-05T08:03:33",
+      "transferTo": 0,
+      "id": 1
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 500,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-01-05T08:04:17",
+      "transferTo": 0,
+      "id": 2
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 300,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-01-05T08:04:22",
+      "transferTo": 0,
+      "id": 3
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 50,
+      "typeoftransaction": "Withdraw",
+      "dot": "2023-01-05T08:04:29",
+      "transferTo": 0,
+      "id": 4
+    },
+    {
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "accno": 10011,
+      "amount": 2000,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-01-05T08:09:07",
+      "transferTo": 0,
+      "id": 5
+    },
+    {
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "accno": 10011,
+      "amount": 100,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-01-05T08:09:10",
+      "transferTo": 0,
+      "id": 6
+    },
+    {
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "accno": 10011,
+      "amount": 500,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-01-05T08:09:14",
+      "transferTo": 0,
+      "id": 7
+    },
+    {
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "accno": 10011,
+      "amount": 50,
+      "typeoftransaction": "Withdraw",
+      "dot": "2023-01-05T08:09:20",
+      "transferTo": 0,
+      "id": 8
+    },
+    {
+      "cid": 112234,
+      "cname": "Seeta",
+      "emailid": "seeta@gmail.com",
+      "accno": 10011,
+      "amount": 500,
+      "typeoftransaction": "Transfer",
+      "dot": "2023-01-05T08:11:38",
+      "transferTo": 10010,
+      "id": 9
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 100,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-11-14T10:31:06",
+      "transferTo": 0,
+      "id": 10
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 250,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-11-14T10:31:38",
+      "transferTo": 0,
+      "id": 11
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 70,
+      "typeoftransaction": "Transfer",
+      "dot": "2023-11-14T11:09:01",
+      "transferTo": 10011,
+      "id": 12
+    },
+    {
+      "cid": 112233,
+      "cname": "Raj",
+      "emailid": "raj@gmail.com",
+      "accno": 10010,
+      "amount": 60,
+      "typeoftransaction": "Transfer",
+      "dot": "2023-11-14T11:10:11",
+      "transferTo": 10011,
+      "id": 13
+    },
+    {
+      "cid": 112237,
+      "cname": "steven",
+      "emailid": "steven@gmail.com",
+      "accno": 10014,
+      "amount": 50,
+      "typeoftransaction": "Transfer",
+      "dot": "2023-11-15T04:43:02",
+      "transferTo": 10010,
+      "id": 14
+    },
+    {
+      "cid": 112237,
+      "cname": "steven",
+      "emailid": "steven@gmail.com",
+      "accno": 10014,
+      "amount": 50,
+      "typeoftransaction": "Withdrawn",
+      "dot": "2023-11-15T04:43:50",
+      "transferTo": 0,
+      "id": 15
+    },
+    {
+      "cid": 112237,
+      "cname": "steven",
+      "emailid": "steven@gmail.com",
+      "accno": 10014,
+      "amount": 60,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-11-15T04:44:26",
+      "transferTo": 0,
+      "id": 16
+    }
+  ]
+}
