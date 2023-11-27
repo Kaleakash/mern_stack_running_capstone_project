@@ -1,7 +1,7 @@
 //const keyRef = require("../config/apiConfig");
 let axios = require("axios");
 //const apiKey = 'YVK8LD9GT5B5U1SP'; 
-const finApiKey="clgoh8pr01qha7p33m00clgoh8pr01qha7p33m0g";
+const finApiKey="XXX-XXXX-XXXXX";
 
 class Stock {
     constructor(symbol, price, volume) {
