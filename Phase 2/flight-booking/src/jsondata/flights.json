@@ -1,0 +1,627 @@
+{
+    "flights":[
+ {
+   "origin": "CPH",
+   "destination": "FRA",
+   "airline": "IB2818",
+   "price": 186,
+   "flightDate":"2023-11-10"
+ },
+ {
+   "origin": "CPH",
+   "destination": "LHR",
+   "airline": "U23631",
+   "price": 152,
+   "flightDate":"2023-11-10"
+ },
+ {
+   "origin": "CDG",
+   "destination": "MAD",
+   "airline": "IB8482",
+   "price": 295,
+   "flightDate":"2023-11-11"
+ },
+ {
+   "origin": "BCN",
+   "destination": "FRA",
+   "airline": "FR7521",
+   "price": 150,
+   "flightDate":"2023-11-11"
+ },
+ {
+   "origin": "CPH",
+   "destination": "FCO",
+   "airline": "TK4667",
+   "price": 137,
+   "flightDate":"2023-11-12"
+ },
+ {
+   "origin": "CPH",
+   "destination": "FCO",
+   "airline": "U24631",
+   "price": 268,
+   "flightDate":"2023-11-12"
+ },
+ {
+   "origin": "FCO",
+   "destination": "CDG",
+   "airline": "VY4335",
+   "price": 158,
+   "flightDate":"2023-11-13"
+ },
+ {
+   "origin": "LHR",
+   "destination": "IST",
+   "airline": "TK8891",
+   "price": 250,
+   "flightDate":"2023-11-13"
+ },
+ {
+   "origin": "FRA",
+   "destination": "AMS",
+   "airline": "U24107",
+   "price": 237,
+   "flightDate":"2023-11-14"
+ },
+ {
+   "origin": "CPH",
+   "destination": "BCN",
+   "airline": "U22593",
+   "price": 218,
+   "flightDate":"2023-11-14"
+ },
+ {
+   "origin": "BCN",
+   "destination": "IST",
+   "airline": "VY9890",
+   "price": 178,
+   "flightDate":"2023-11-14"
+ },
+ {
+   "origin": "AMS",
+   "destination": "CPH",
+   "airline": "TK4927",
+   "price": 290,
+   "flightDate":"2023-11-15"
+ },
+ {
+   "origin": "FCO",
+   "destination": "MAD",
+   "airline": "BA1164",
+   "price": 118,
+   "flightDate":"2023-11-15"
+ },
+ {
+   "origin": "CPH",
+   "destination": "LHR",
+   "airline": "BA7710",
+   "price": 138,
+   "flightDate":"2023-12-15"
+ },
+ {
+   "origin": "BCN",
+   "destination": "AMS",
+   "airline": "U24985",
+   "price": 191,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "MAD",
+   "destination": "CDG",
+   "airline": "IB9961",
+   "price": 128,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "LHR",
+   "destination": "FRA",
+   "airline": "LH2118",
+   "price": 165,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "IST",
+   "destination": "FRA",
+   "airline": "IB8911",
+   "price": 180,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "AMS",
+   "destination": "FRA",
+   "airline": "TK2372",
+   "price": 197,
+   "flightDate":"2023-12-11"
+ },
+ {
+   "origin": "FRA",
+   "destination": "IST",
+   "airline": "LH4145",
+   "price": 169,
+   "flightDate":"2023-12-10"
+ },
+ {
+   "origin": "MAD",
+   "destination": "CDG",
+   "airline": "IB6112",
+   "price": 112,
+   "flightDate":"2023-12-12"
+ },
+ {
+   "origin": "CPH",
+   "destination": "FRA",
+   "airline": "LH1678",
+   "price": 298,
+   "flightDate":"2023-12-08"
+ },
+ {
+   "origin": "LHR",
+   "destination": "CPH",
+   "airline": "LH6620",
+   "price": 217,
+   "flightDate":"2023-12-09"
+ },
+ {
+   "origin": "MAD",
+   "destination": "LHR",
+   "airline": "TK4199",
+   "price": 186,
+   "flightDate":"2023-12-09"
+ },
+ {
+   "origin": "MAD",
+   "destination": "CDG",
+   "airline": "IB7403",
+   "price": 253,
+   "flightDate":"2024-01-11"
+ },
+ {
+   "origin": "FRA",
+   "destination": "CPH",
+   "airline": "BA4369",
+   "price": 109,
+   "flightDate":"2024-01-12"
+ },
+ {
+   "origin": "BCN",
+   "destination": "MAD",
+   "airline": "IB2171",
+   "price": 259,
+   "flightDate":"2023-11-13"
+ },
+ {
+   "origin": "IST",
+   "destination": "LHR",
+   "airline": "LH6412",
+   "price": 197,
+   "flightDate":"2023-12-14"
+ },
+ {
+   "origin": "IST",
+   "destination": "MAD",
+   "airline": "LH1115",
+   "price": 160,
+   "flightDate":"2024-01-15"
+ },
+ {
+   "origin": "LHR",
+   "destination": "LHR",
+   "airline": "VY8162",
+   "price": 285,
+   "flightDate":"2023-12-15"
+ },
+ {
+   "origin": "FRA",
+   "destination": "LHR",
+   "airline": "BA8162",
+   "price": 205,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "AMS",
+   "destination": "FCO",
+   "airline": "BA7610",
+   "price": 168,
+   "flightDate":"2024-01-17"
+ },
+ {
+   "origin": "LHR",
+   "destination": "IST",
+   "airline": "LH1085",
+   "price": 148,
+   "flightDate":"2024-01-17"
+ },
+ {
+   "origin": "FCO",
+   "destination": "FRA",
+   "airline": "U21423",
+   "price": 274,
+   "flightDate":"2024-01-18"
+ },
+ {
+   "origin": "CPH",
+   "destination": "MAD",
+   "airline": "U23282",
+   "price": 113,
+   "flightDate":"2024-01-18"
+ },
+ {
+   "origin": "CDG",
+   "destination": "CPH",
+   "airline": "LH5778",
+   "price": 263,
+   "flightDate":"2024-01-19"
+ },
+ {
+   "origin": "CPH",
+   "destination": "CDG",
+   "airline": "BA2777",
+   "price": 284,
+   "flightDate":"2024-01-19"
+ },
+ {
+   "origin": "BCN",
+   "destination": "LHR",
+   "airline": "TK4375",
+   "price": 208,
+   "flightDate":"2023-11-18"
+ },
+ {
+   "origin": "MAD",
+   "destination": "FCO",
+   "airline": "LH8408",
+   "price": 149,
+   "flightDate":"2023-11-14"
+ },
+ {
+   "origin": "AMS",
+   "destination": "IST",
+   "airline": "IB4563",
+   "price": 109,
+   "flightDate":"2024-01-15"
+ },
+ {
+   "origin": "LHR",
+   "destination": "FCO",
+   "airline": "LH5174",
+   "price": 251,
+   "flightDate":"2024-02-10"
+ },
+ {
+   "origin": "MAD",
+   "destination": "BCN",
+   "airline": "BA9569",
+   "price": 232,
+   "flightDate":"2024-02-12"
+ },
+ {
+   "origin": "AMS",
+   "destination": "FRA",
+   "airline": "TK2659",
+   "price": 248,
+   "flightDate":"2024-02-13"
+ },
+ {
+   "origin": "LHR",
+   "destination": "CDG",
+   "airline": "IB2771",
+   "price": 289,
+   "flightDate":"2024-02-14"
+ },
+ {
+   "origin": "IST",
+   "destination": "MAD",
+   "airline": "IB8688",
+   "price": 150,
+   "flightDate":"2024-01-08"
+ },
+ {
+   "origin": "CPH",
+   "destination": "AMS",
+   "airline": "TK8355",
+   "price": 137,
+   "flightDate":"2024-01-09"
+ },
+ {
+   "origin": "FCO",
+   "destination": "CDG",
+   "airline": "VY2974",
+   "price": 111,
+   "flightDate":"2024-02-10"
+ },
+ {
+   "origin": "AMS",
+   "destination": "FRA",
+   "airline": "LH5909",
+   "price": 113,
+   "flightDate":"2024-01-22"
+ },
+ {
+   "origin": "CPH",
+   "destination": "BCN",
+   "airline": "FR7949",
+   "price": 176,
+   "flightDate":"2024-02-21"
+ },
+ {
+   "origin": "BCN",
+   "destination": "CPH",
+   "airline": "U27858",
+   "price": 237,
+   "flightDate":"2024-01-22"
+ },
+ {
+   "origin": "FRA",
+   "destination": "AMS",
+   "airline": "LH2320",
+   "price": 288,
+   "flightDate":"2024-01-24"
+ },
+ {
+   "origin": "LHR",
+   "destination": "BCN",
+   "airline": "VY4633",
+   "price": 149,
+   "flightDate":"2024-01-28"
+ },
+ {
+   "origin": "AMS",
+   "destination": "IST",
+   "airline": "IB7289",
+   "price": 163,
+   "flightDate":"2024-02-25"
+ },
+ {
+   "origin": "FRA",
+   "destination": "LHR",
+   "airline": "IB9443",
+   "price": 254,
+   "flightDate":"2024-02-29"
+ },
+ {
+   "origin": "IST",
+   "destination": "FCO",
+   "airline": "LH4948",
+   "price": 176,
+   "flightDate":"2023-11-22"
+ },
+ {
+   "origin": "IST",
+   "destination": "BCN",
+   "airline": "TK5558",
+   "price": 211,
+   "flightDate":"2023-11-27"
+ },
+ {
+   "origin": "BCN",
+   "destination": "BCN",
+   "airline": "BA9409",
+   "price": 215,
+   "flightDate":"2023-11-22"
+ },
+ {
+   "origin": "IST",
+   "destination": "AMS",
+   "airline": "FR9261",
+   "price": 267,
+   "flightDate":"2023-12-16"
+ },
+ {
+   "origin": "CDG",
+   "destination": "IST",
+   "airline": "IB7181",
+   "price": 227,
+   "flightDate":"2023-12-18"
+ },
+ {
+   "origin": "LHR",
+   "destination": "BCN",
+   "airline": "TK1446",
+   "price": 217,
+   "flightDate":"2023-12-25"
+ },
+ {
+   "origin": "FCO",
+   "destination": "FRA",
+   "airline": "TK2793",
+   "price": 175,
+   "flightDate":"2023-11-09"
+ },
+ {
+   "origin": "AMS",
+   "destination": "CPH",
+   "airline": "FR1491",
+   "price": 284,
+   "flightDate":"2024-01-09"
+ },
+ {
+   "origin": "IST",
+   "destination": "BCN",
+   "airline": "IB9219",
+   "price": 279,
+   "flightDate":"2024-01-10"
+ },
+ {
+   "origin": "MAD",
+   "destination": "AMS",
+   "airline": "TK7871",
+   "price": 159,
+   "flightDate":"2024-01-11"
+ },
+ {
+   "origin": "FCO",
+   "destination": "AMS",
+   "airline": "VY4840",
+   "price": 260,
+   "flightDate":"2024-01-12"
+ },
+ {
+   "origin": "MAD",
+   "destination": "FRA",
+   "airline": "BA8982",
+   "price": 171,
+   "flightDate":"2024-02-13"
+ },
+ {
+   "origin": "IST",
+   "destination": "LHR",
+   "airline": "U23526",
+   "price": 254,
+   "flightDate":"2024-02-13"
+ },
+ {
+   "origin": "FRA",
+   "destination": "MAD",
+   "airline": "BA6773",
+   "price": 157,
+   "flightDate":"2024-02-14"
+ },
+ {
+   "origin": "CDG",
+   "destination": "CPH",
+   "airline": "IB5257",
+   "price": 299,
+   "flightDate":"2024-01-15"
+ },
+ {
+   "origin": "CPH",
+   "destination": "CDG",
+   "airline": "LH8545",
+   "price": 230,
+   "flightDate":"2024-01-16"
+ },
+ {
+   "origin": "LHR",
+   "destination": "AMS",
+   "airline": "IB4737",
+   "price": 110,
+   "flightDate":"2024-01-17"
+ },
+ {
+   "origin": "BCN",
+   "destination": "MAD",
+   "airline": "LH5496",
+   "price": 293,
+   "flightDate":"2024-01-18"
+ },
+ {
+   "origin": "CDG",
+   "destination": "LHR",
+   "airline": "U29718",
+   "price": 103,
+   "flightDate":"2024-01-19"
+ },
+ {
+   "origin": "LHR",
+   "destination": "AMS",
+   "airline": "BA9561",
+   "price": 253,
+   "flightDate":"2024-01-20"
+ },
+ {
+   "origin": "FRA",
+   "destination": "LHR",
+   "airline": "TK3167",
+   "price": 118,
+   "flightDate":"2024-01-21"
+ },
+ {
+   "origin": "IST",
+   "destination": "FRA",
+   "airline": "FR4727",
+   "price": 108,
+   "flightDate":"2024-01-22"
+ },
+ {
+   "origin": "CPH",
+   "destination": "IST",
+   "airline": "LH6320",
+   "price": 115,
+   "flightDate":"2023-02-23"
+ },
+ {
+   "origin": "LHR",
+   "destination": "AMS",
+   "airline": "BA6657",
+   "price": 122,
+   "flightDate":"2024-01-24"
+ },
+ {
+   "origin": "LHR",
+   "destination": "FRA",
+   "airline": "TK5342",
+   "price": 295,
+   "flightDate":"2024-01-25"
+ },
+ {
+   "origin": "IST",
+   "destination": "LHR",
+   "airline": "IB4938",
+   "price": 226,
+   "flightDate":"2024-01-26"
+ },
+ {
+   "origin": "CDG",
+   "destination": "BCN",
+   "airline": "VY9791",
+   "price": 289,
+   "flightDate":"2024-02-27"
+ },
+ {
+   "origin": "MAD",
+   "destination": "LHR",
+   "airline": "IB4124",
+   "price": 272,
+   "flightDate":"2024-01-28"
+ },
+ {
+   "origin": "FRA",
+   "destination": "MAD",
+   "airline": "BA7842",
+   "price": 121,
+   "flightDate":"2024-01-26"
+ },
+ {
+   "origin": "AMS",
+   "destination": "FCO",
+   "airline": "VY5092",
+   "price": 178,
+   "flightDate":"2024-01-22"
+ },
+ {
+   "origin": "CDG",
+   "destination": "LHR",
+   "airline": "BA9813",
+   "price": 171,
+   "flightDate":"2024-02-20"
+ },
+ {
+   "origin": "FRA",
+   "destination": "IST",
+   "airline": "BA2421",
+   "price": 226,
+   "flightDate":"2024-02-10"
+ },
+ {
+   "origin": "IST",
+   "destination": "CPH",
+   "airline": "U28059",
+   "price": 262,
+   "flightDate":"2024-02-12"
+ },
+ {
+   "origin": "MAD",
+   "destination": "AMS",
+   "airline": "LH7260",
+   "price": 191,
+   "flightDate":"2024-02-13"
+ },
+ {
+   "origin": "CDG",
+   "destination": "CPH",
+   "airline": "TK2044",
+   "price": 186,
+   "flightDate":"2024-01-14"
+ }
+]
+}
