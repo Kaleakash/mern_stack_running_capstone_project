@@ -66,10 +66,23 @@
       "address": "HSR Layout",
       "password": "steven@1234",
       "accno": 10014,
-      "amount": 960,
+      "amount": 1010,
       "typeofuser": "customer",
       "cid": 112237,
       "id": 5
+    },
+    {
+      "cname": "Ravi",
+      "emailid": "ravi@gmail.com",
+      "gender": "male",
+      "phonenumber": "09874567876",
+      "address": "HSR Layout Bangalore 564235",
+      "password": "ravi@123",
+      "accno": 10015,
+      "amount": 1350,
+      "typeofuser": "customer",
+      "cid": 112238,
+      "id": 6
     }
   ],
   "transaction": [
@@ -248,6 +261,39 @@
       "dot": "2023-11-15T04:44:26",
       "transferTo": 0,
       "id": 16
+    },
+    {
+      "cid": 112238,
+      "cname": "Ravi",
+      "emailid": "ravi@gmail.com",
+      "accno": 10015,
+      "amount": 100,
+      "typeoftransaction": "Withdrawn",
+      "dot": "2023-12-06T07:27:04",
+      "transferTo": 0,
+      "id": 17
+    },
+    {
+      "cid": 112238,
+      "cname": "Ravi",
+      "emailid": "ravi@gmail.com",
+      "accno": 10015,
+      "amount": 500,
+      "typeoftransaction": "Deposit",
+      "dot": "2023-12-06T07:27:25",
+      "transferTo": 0,
+      "id": 18
+    },
+    {
+      "cid": 112238,
+      "cname": "Ravi",
+      "emailid": "ravi@gmail.com",
+      "accno": 10015,
+      "amount": 50,
+      "typeoftransaction": "Transfer",
+      "dot": "2023-12-06T07:29:16",
+      "transferTo": 10014,
+      "id": 19
     }
   ]
 }

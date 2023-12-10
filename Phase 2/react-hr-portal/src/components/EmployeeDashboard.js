@@ -1,12 +1,13 @@
 import axios from 'axios';
+import '../App.css';
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Button, Modal,Form } from 'react-bootstrap';
+import { Navbar, Nav,Container, Row, Col, Card, Button, Modal,Form } from 'react-bootstrap';
 import "react-toastify/dist/ReactToastify.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({onLogout}) => {
   let navigate = useNavigate();
   const [leaveReason, setLeaveReason] = useState('');
   const [employeeDetails,setEmployeeDetails] = useState({
@@ -18,7 +19,8 @@ const EmployeeDashboard = () => {
   });
   const [showModal, setShowModal] = useState(false);
   const [showLeaveModel,setLeaveModel]=useState(false);
-  
+  const [showLeaveModelPolicy,setLeaveModelPolicy]=useState(false);
+
   const handleShowModal = () => {
     setShowModal(true);
   };
@@ -35,7 +37,13 @@ const EmployeeDashboard = () => {
     setLeaveModel(false);
   };
 
+  const handleShowLeaveModalPolicy1 = () => {
+    setLeaveModelPolicy(true);
+  };
 
+  const handleCloseLeaveModalPolicy1 = () => {
+    setLeaveModelPolicy(false);
+  };
 
   useEffect(()=> {
     const loadEmployeeInfo=async ()=> {
@@ -43,12 +51,12 @@ const EmployeeDashboard = () => {
         if(obj!=null){
           let employeeInfo = await axios.get("http://localhost:3000/employees");
           let result = employeeInfo.data.find(e=>e.email==obj);
-          console.log(result)
+
           setEmployeeDetails(result);
         }
     }
     loadEmployeeInfo();
-  },[employeeDetails]);
+  },[]);
 
   const handleApplyLeave = async () => {
     // Logic to submit leave application
@@ -68,9 +76,14 @@ const EmployeeDashboard = () => {
 
   };
   const handleLogout = ()=> {
+    onLogout();
     navigate("/");
+
 } 
 
+const handleShowLeaveModalPolicy= (event)=> {
+
+}
 
   return (
     <div style={{
@@ -85,37 +98,36 @@ const EmployeeDashboard = () => {
     
     <Col>
     <Row className="mb-3">
+        
+
+
         <Col className="text-end">
           <Button variant="link" onClick={handleLogout}>
             <FontAwesomeIcon icon={faSignOutAlt} /> Logout
           </Button>
         </Col>
-      </Row>
-
-      <h1 className="text-center mb-4" style={{"color":"red"}}>Employee Dashboard</h1>
-      
+      </Row>      
       <Row className="flex-grow-1 align-items-start">
-        <Col md={4} >
-          <Card>
-            <Card.Body>
-              <Card.Title>Welcome User </Card.Title>
-              <Card.Text>
-                <strong>{employeeDetails.name}</strong> 
-              </Card.Text>
+        <Col md={3} >
+          <div>
+          <Card className="card-container">
+            <Card.Body className="expandable-card">
+              <Card.Title>Welcome User {employeeDetails.name}</Card.Title>
               <Button variant="primary" onClick={handleShowModal}>
                 View Details
               </Button>
             </Card.Body>
           </Card>
+          </div>
         </Col>
 
 
-        <Col md={4} >
+        <Col md={3} >
           <Card>
             <Card.Body>
-              {/* <Card.Title>Welcome User </Card.Title> */}
+              <Card.Title>{employeeDetails.name} View your leave details!</Card.Title>
               <Card.Text>
-                <strong>{employeeDetails.name} View your leave details!</strong> 
+                <strong></strong> 
               </Card.Text>
               <Button variant="primary" onClick={handleShowLeaveModal}>
                 View Leave Status
@@ -124,18 +136,32 @@ const EmployeeDashboard = () => {
           </Card>
         </Col>
 
-        <Col md={4}>
+        <Col md={3} >
+          <Card>
+            <Card.Body>
+              <Card.Title>{employeeDetails.name} View your leave details!</Card.Title>
+              <Card.Text>
+                <strong></strong> 
+              </Card.Text>
+              <Button variant="primary" onClick={handleShowLeaveModalPolicy1}>
+                View Leave Status
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Apply for Leave</Card.Title>
               <Form>
                 <Form.Group controlId="leaveReason">
-                  <Form.Label>Reason for Leave</Form.Label>
                   <Form.Control
                     as="textarea"
-                    rows={3}
+                    rows={1}
                     value={leaveReason}
                     onChange={(e) => setLeaveReason(e.target.value)}
+                    placeholder='Reason for leave'
                   />
                 </Form.Group>
                 <Button variant="primary" onClick={handleApplyLeave}>
@@ -145,6 +171,9 @@ const EmployeeDashboard = () => {
             </Card.Body>
           </Card>
         </Col>
+
+        
+        
       </Row>
 
       </Col>
@@ -152,6 +181,30 @@ const EmployeeDashboard = () => {
 
       <Row>
       
+
+
+      <Col>
+        <Modal show={showLeaveModelPolicy} onHide={handleCloseLeaveModalPolicy1}>
+        <Modal.Header closeButton>
+          <Modal.Title>Leave Policy Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        1. Leave cannot be claimed as a matter of right.<br />
+        2. The calendar year for leave is from January to December.<br/>
+        3. Leaves will be credited to employees account in the beginning of calendar year <br/>
+        4. Employees will be eligible for Earned Leave only after completion of probationary period. <br/>
+        5. It is mandatory for an employee to utilize 18 leaves during an year. <br/>
+        6. A Maximum of 9 earned leave can be carried forward to next year.<br/>
+        7. Leave without approval will be considered as leave without pay.<br />
+        8. Leave for the purpose of LTA should be earned leave. It cannot be casual<br/>
+        </Modal.Body>
+        <Button variant="primary" onClick={handleCloseLeaveModalPolicy1}>
+                Close
+       </Button>
+      </Modal>
+        </Col>
+
+
       <Col>
         <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>

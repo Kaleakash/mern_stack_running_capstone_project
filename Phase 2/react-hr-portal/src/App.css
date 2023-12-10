@@ -7,6 +7,108 @@
   pointer-events: none;
 }
 
+/* styles.css */
+
+.navbar-section {
+  background-color: #f8f9fa; /* Change background color as desired */
+  padding: 10px 0; /* Adjust padding as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for a raised effect */
+}
+
+.navbar-section .navbar {
+  justify-content: flex-end; /* Align menu items to the right */
+}
+
+.navbar-section .navbar-nav .nav-link {
+  color: #333; /* Adjust link color */
+  margin-right: 15px; /* Add margin between links */
+}
+
+.hr-policy {
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.employee-policy-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.employee-policy-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.employee-policy-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.employee-policy-page li {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.expandable-card {
+  transition: all 0.3s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.expandable-card:hover {
+  transform: scaleY(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.employee-policy-page h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.employee-policy-page p {
+  margin-bottom: 0;
+}
+
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.policy-title {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.policy-content {
+  color: #666;
+  line-height: 1.6;
+}
+.navbar-section .navbar-nav .nav-link:hover {
+  color: #007bff; /* Change link color on hover */
+}
+
+.navbar-section .navbar-brand {
+  font-weight: bold; /* Adjust brand font weight */
+  margin-right: 20px; /* Add margin between brand and menu items */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

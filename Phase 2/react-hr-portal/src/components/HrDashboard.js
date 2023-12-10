@@ -5,19 +5,32 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch, useSelector } from 'react-redux';
+import { addEmployee, fetchEmployee,removeEmployee } from '../slice/emloyeeSlice';
 
-const HRDashboard = () => {
+const HRDashboard = ({onLogout}) => {
   const [employees, setEmployees] = useState([]);
   const [storedResult,setStoredResult]=useState(false);
+  const [deleteResult,setDeleteResult]=useState(false);
+  let allEmployees = useSelector(gs=>gs.employeeKey);
+  let dispatch = useDispatch();
   useEffect(()=> {
+    localStorage.setItem('userID',false);
+    console.log(localStorage)
     const loadEmployees=async()=> {
-      let result = await axios.get("http://localhost:3000/employees")
-      setEmployees(result.data);
+      //let result = await axios.get("http://localhost:3000/employees")
+      //setEmployees(result.data);
+      dispatch(fetchEmployee());
+      console.log(allEmployees.employeeList);
+      setEmployees(allEmployees.employeeList);
     }
     loadEmployees();
-  },[storedResult])
+    setStoredResult(false);
+    setDeleteResult(false);
+    console.log("called...useEffect")
+  },[storedResult,deleteResult])
   const navigate = useNavigate();
- 
+  
   const [leaveRequestStatus,setLeaveRequestsStatus]=useState(false);
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -39,8 +52,10 @@ const HRDashboard = () => {
 
   const handleAddEmployee = async () => {
     const id = employees.length + 1;
-    let result = await axios.post("http://localhost:3000/employees",newEmployee);
-    if(result){
+    //let result = await axios.post("http://localhost:3000/employees",newEmployee);
+    let result = await dispatch(addEmployee(newEmployee));
+    console.log(result.meta.requestStatus);
+    if(result.meta.requestStatus=="fulfilled"){
       //setStoredResult(res=>{res:true});
       setStoredResult(true);
     }
@@ -49,7 +64,7 @@ const HRDashboard = () => {
     handleClose();
   };
 
-
+// 
 
   const handleLeaveRequest = (employeeId) => {
     let findEmployee = employees.find(e=>e.id==employeeId);
@@ -72,7 +87,17 @@ const HRDashboard = () => {
   };
 
 
-
+  const removeEmployee = async (id)=> {
+    console.log(id);
+    let result = await axios.delete("http://localhost:3000/employees/"+id);
+    //let result = await dispatch(removeEmployee(id));
+    //console.log(result.meta.requestStatus)
+    if(result){
+      setDeleteResult(true);
+    }
+    //setEmployees([...employees, { ...newEmployee, id }]);
+    setNewEmployee({ name: '', department: '', email: '',leaveApplied:false});
+  }
   const handleApproveLeave = async (requestId,empid) => {
     const updatedRequests = leaveRequests.map((request) =>
       request.id === requestId ? { ...request, status: 'Approved' } : request
@@ -97,7 +122,9 @@ const HRDashboard = () => {
   };
 
 
-  const handleLogout = ()=> {
+  const handleLogoutInfo = ()=> {
+    onLogout();  
+    //localStorage.removeItem('userID')
       navigate("/");
   } 
   const handleRejectLeave = async (requestId,empid) => {
@@ -135,16 +162,24 @@ const HRDashboard = () => {
     >
 
       <Container className="d-flex flex-column h-100">
+
+        
       <Row className="mb-3">
         <Col className="text-end">
-          <Button variant="link" onClick={handleLogout}>
+        <h1 className="text-center mb-4" style={{"color":"red"}}>HR Dashboard</h1>
+        </Col>
+
+        <Col className="text-end">
+          <Button variant="link" onClick={handleLogoutInfo}>
             <FontAwesomeIcon icon={faSignOutAlt} /> Logout
           </Button>
         </Col>
+
+
       </Row>
-        <h1 className="text-center mb-4" style={{"color":"red"}}>HR Dashboard</h1>
         
-        <Col md={4} className="mb-3">
+        
+        <Col md={3} className="mb-3">
             <Row className="flex-grow-1 align-items-start">
             <Card>
               <Card.Body>
@@ -158,6 +193,7 @@ const HRDashboard = () => {
           </Col>
           <hr style={{"color":"orangered"}}/>
         <Col>
+
         <Row>
           {employees.map((employee) => (
             <Col key={employee.id} md={4} className="mb-3">
@@ -167,11 +203,15 @@ const HRDashboard = () => {
                   <Card.Subtitle className="mb-2 text-muted">{employee.department}</Card.Subtitle>
                   <Card.Text>Email: {employee.email}</Card.Text>
                   {
-employee.leaveApplied?<Button variant="primary" onClick={() => handleLeaveRequest(employee.id)}>
+employee.leaveApplied?<div><Button variant="primary" onClick={() => handleLeaveRequest(employee.id)}>
                     Manage Leave 
-                  </Button>:<Button variant="primary" onClick={() => handleLeaveRequest(employee.id)} disabled={true}>
+                  </Button>
+                  <Button variant="primary" style={{"margin":"4px"}} onClick={() => removeEmployee(employee.id)}>Remove Employee</Button></div>
+                  :<div><Button variant="primary" onClick={() => handleLeaveRequest(employee.id)} disabled={true}>
                     Manage Leave
                   </Button>
+                  <Button variant="primary" style={{"margin":"4px"}} onClick={() => removeEmployee(employee.id)}>Remove Employee</Button>
+                  </div>
                   }
                   
                 </Card.Body>

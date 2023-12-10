@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 	
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import axios from 'axios';
-const Login = () => {
+
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchEmployee } from '../slice/emloyeeSlice';
+const Login = ({ onLogin,onLogout }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [userType, setUserType] = useState('employee');
   const [validated, setValidated] = useState(false);
   let navigate  = useNavigate();
+  let dispatch = useDispatch();
+  let allEmployees=useSelector(gs=>gs.employeeKey);
 
+  useEffect(()=> {
+    const loadAllEmployee = async()=> {
+      dispatch(fetchEmployee());
+    }
+    loadAllEmployee();
+  },[])
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -23,9 +33,12 @@ const Login = () => {
       // Perform login authentication based on username, password, and userType
       console.log('Logging in...', { username, password, userType });
       if(username=="hr@gmail.com" && password=="hr@123" && userType=="hr"){
+        
+        onLogin();
         toast.success("successfully done!",{
          
           onClose: () => {
+            
             navigate("/HrDashboard");
          }
 
@@ -33,12 +46,16 @@ const Login = () => {
           
       }else {
        // toast.failure("Invalid UserName or password")
-       //
-       let allEmployee = await axios.get("http://localhost:3000/employees");
-       let validUser = await allEmployee.data.find(e=>e.email==username && e.password==password && userType=="employee");
+       
+       //let allEmployee = await axios.get("http://localhost:3000/employees");
+       console.log(allEmployees.employeeList.length)
+       //let validUser = await allEmployee.data.find(e=>e.email==username && e.password==password);
+       let validUser = allEmployees.employeeList.find(e=>e.email==username && e.password==password);
+       console.log(validUser);
        if(validUser==undefined){
         toast.error("InValid emailid or password!")
        }else {
+          onLogin();
           sessionStorage.setItem("userInfo",username);
           navigate("/EmployeeDashboard");
        } 
