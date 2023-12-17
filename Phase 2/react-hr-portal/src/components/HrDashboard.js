@@ -14,29 +14,32 @@ const HRDashboard = ({onLogout}) => {
   const [deleteResult,setDeleteResult]=useState(false);
   let allEmployees = useSelector(gs=>gs.employeeKey);
   let dispatch = useDispatch();
-  useEffect(()=> {
-    localStorage.setItem('userID',false);
-    console.log(localStorage)
-    const loadEmployees=async()=> {
-      //let result = await axios.get("http://localhost:3000/employees")
-      //setEmployees(result.data);
-      dispatch(fetchEmployee());
-      console.log(allEmployees.employeeList);
-      setEmployees(allEmployees.employeeList);
-    }
-    loadEmployees();
-    setStoredResult(false);
-    setDeleteResult(false);
-    console.log("called...useEffect")
-  },[storedResult,deleteResult])
-  const navigate = useNavigate();
-  
   const [leaveRequestStatus,setLeaveRequestsStatus]=useState(false);
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [newEmployee, setNewEmployee] = useState({ name: '', department: '', email: '',leaveApplied:false });
   const [selectedRequest, setSelectedRequest] = useState(null);
   const [showLeaveModal,setLeaveModal]=useState(false);
+
+  useEffect(()=> {
+    localStorage.setItem('userID',false);
+    console.log(localStorage)
+    const loadEmployees=async()=> {
+      //let result = await axios.get("http://localhost:3000/employees")
+      //setEmployees(result.data);
+      let result = await dispatch(fetchEmployee());
+      console.log(result);
+      console.log(allEmployees.employeeList);
+      setEmployees(result.payload);
+    }
+    loadEmployees();
+    setStoredResult(false);
+    setDeleteResult(false);
+    console.log("called...useEffect")
+  },[storedResult,deleteResult,newEmployee])
+  const navigate = useNavigate();
+  
+  
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -92,11 +95,14 @@ const HRDashboard = ({onLogout}) => {
     let result = await axios.delete("http://localhost:3000/employees/"+id);
     //let result = await dispatch(removeEmployee(id));
     //console.log(result.meta.requestStatus)
-    if(result){
+    console.log(deleteResult);
+
+   // if(result){
       setDeleteResult(true);
-    }
+    //}
     //setEmployees([...employees, { ...newEmployee, id }]);
     setNewEmployee({ name: '', department: '', email: '',leaveApplied:false});
+    //setDeleteResult(false);
   }
   const handleApproveLeave = async (requestId,empid) => {
     const updatedRequests = leaveRequests.map((request) =>
@@ -108,12 +114,13 @@ const HRDashboard = ({onLogout}) => {
     handleLeaveClose();
     setLeaveRequestsStatus(true);
     let employeeInfo = employees.find(e=>e.id==empid);
-    if(employeeInfo!=undefined){
-      console.log(employeeInfo)
-      employeeInfo.leaveApplied=false;
-      employeeInfo.status = "Approved";
+    let employeeInfo1 = {...employeeInfo};
+    if(employeeInfo1!=undefined){
+      console.log(employeeInfo1)
+      employeeInfo1.leaveApplied=false;
+      employeeInfo1.status = "Approved";
       setStoredResult(true);
-      let result = await axios.put(`http://localhost:3000/employees/${employeeInfo.id}`,employeeInfo);
+      let result = await axios.put(`http://localhost:3000/employees/${employeeInfo1.id}`,employeeInfo1);
       if(result){
         //toast.success("Leave Approved !")
       }
@@ -138,12 +145,13 @@ const HRDashboard = ({onLogout}) => {
     setLeaveRequestsStatus(true);
 
     let employeeInfo = employees.find(e=>e.id==empid);
-    if(employeeInfo!=undefined){
-      console.log(employeeInfo)
-      employeeInfo.leaveApplied=false;
-      employeeInfo.status = "Rejected";
+    let employeeInfo1={...employeeInfo}
+    if(employeeInfo1!=undefined){
+      console.log(employeeInfo1)
+      employeeInfo1.leaveApplied=false;
+      employeeInfo1.status = "Rejected";
       setStoredResult(true);
-      let result = await axios.put(`http://localhost:3000/employees/${employeeInfo.id}`,employeeInfo);
+      let result = await axios.put(`http://localhost:3000/employees/${employeeInfo1.id}`,employeeInfo1);
       if(result){
         //toast.success("Leave Rejected!")
       }

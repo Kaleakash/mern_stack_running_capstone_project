@@ -20,7 +20,7 @@ const EmployeeDashboard = ({onLogout}) => {
   const [showModal, setShowModal] = useState(false);
   const [showLeaveModel,setLeaveModel]=useState(false);
   const [showLeaveModelPolicy,setLeaveModelPolicy]=useState(false);
-
+  const [leaveButton,setLeaveButton]=useState(true);
   const handleShowModal = () => {
     setShowModal(true);
   };
@@ -56,7 +56,7 @@ const EmployeeDashboard = ({onLogout}) => {
         }
     }
     loadEmployeeInfo();
-  },[]);
+  },[employeeDetails]);
 
   const handleApplyLeave = async () => {
     // Logic to submit leave application
@@ -160,11 +160,11 @@ const handleShowLeaveModalPolicy= (event)=> {
                     as="textarea"
                     rows={1}
                     value={leaveReason}
-                    onChange={(e) => setLeaveReason(e.target.value)}
+                    onChange={(e) => {setLeaveReason(e.target.value); setLeaveButton(false)}}
                     placeholder='Reason for leave'
                   />
                 </Form.Group>
-                <Button variant="primary" onClick={handleApplyLeave}>
+                <Button variant="primary" onClick={handleApplyLeave} disabled={leaveButton}>
                   Apply Leave
                 </Button>
               </Form>
